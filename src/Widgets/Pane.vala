@@ -118,6 +118,7 @@ public class Widgets.Pane : Gtk.EventBox {
         var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
         main_box.expand = true;
         main_box.get_style_context ().add_class ("pane");
+        main_box.get_style_context ().add_class ("opaque");
         //main_box.pack_start (profile_box, false, false, 0);
         main_box.pack_start (listbox_scrolled, true, true, 0);   
         main_box.pack_end (add_revealer, false, false, 0);  

@@ -43,6 +43,9 @@ executable(
     'src/MainWindow.vala',
     'src/Utils.vala',
 
+    'src/Helper/BlurHelper.vala',
+
+    'src/Services/IGala.vala',
     'src/Services/Database.vala',
     'src/Services/Todoist.vala',
     'src/Services/LabelsController.vala',
@@ -116,6 +119,7 @@ executable(
         dependency('gtk+-3.0'),
         dependency('json-glib-1.0'),
         dependency('webkit2gtk-4.0'),
+	dependency('gdk-x11-3.0'),
         libecal_dep,
         libical_dep,
         dependency('libedataserver-1.2', version: '>=3.8.0'),

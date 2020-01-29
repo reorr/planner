@@ -891,3 +891,31 @@ paned > separator {
 .label-danger {
     color:#ed5353;
 }
+
+.frame{
+    background-color: rgba(0, 0, 0, 0);
+}
+    
+.background {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.horizontal {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.vertical {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.pane {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.opaque {
+    background-color: rgba(26, 26, 26, 0.8);
+}
+
+.not-opaque {
+    background-color: rgba(51, 51, 51, 1);
+}

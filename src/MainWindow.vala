@@ -35,12 +35,17 @@ public class MainWindow : Gtk.Window {
     private uint timeout_id = 0;
     private uint configure_id;
 
+    BlurHelper blur;
+
     public MainWindow (Planner application) {
         Object (
             application: application,
             icon_name: "com.github.alainm23.planner",
             title: _("Planner")
         );
+
+        blur = new BlurHelper (this);
+        blur.enable ();
     }
 
     construct {
@@ -51,6 +56,7 @@ public class MainWindow : Gtk.Window {
         sidebar_header.has_subtitle = false;
         sidebar_header.show_close_button = true;
         sidebar_header.get_style_context ().add_class ("sidebar-header");
+        sidebar_header.get_style_context ().add_class ("opaque");
         sidebar_header.get_style_context ().add_class ("titlebar");
         sidebar_header.get_style_context ().add_class ("default-decoration");
         sidebar_header.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
