@@ -128,6 +128,7 @@ public class Widgets.LabelRow : Gtk.ListBoxRow {
     private void create_popover () {
         popover = new Gtk.Popover (color_button);
         popover.position = Gtk.PositionType.BOTTOM;
+        popover.get_style_context ().add_class ("not-opaque");
 
         var color_30 = new Gtk.RadioButton (null);
         color_30.valign = Gtk.Align.START;

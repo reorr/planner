@@ -669,6 +669,7 @@ public class Views.Project : Gtk.EventBox {
     private void create_popover () {
         popover = new Gtk.Popover (settings_button);
         popover.position = Gtk.PositionType.BOTTOM;
+        popover.get_style_context ().add_class ("not-opaque");
 
         var edit_menu = new Widgets.ModelButton (_("Edit"), "edit-symbolic", "");
         //var archive_menu = new Widgets.ModelButton (_("Archive project"), "planner-archive-symbolic");

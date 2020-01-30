@@ -259,6 +259,7 @@ public class Widgets.New : Gtk.Revealer {
         stack = new Gtk.Stack ();
         stack.expand = true;
         stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
+        stack.get_style_context ().add_class ("not-opaque");
 
         stack.add_named (create_chooser_widget (), "chooser");
         stack.add_named (box, "box");

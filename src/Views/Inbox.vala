@@ -561,6 +561,7 @@ public class Views.Inbox : Gtk.EventBox {
     private void create_popover () {
         popover = new Gtk.Popover (settings_button);
         popover.position = Gtk.PositionType.BOTTOM;
+        popover.get_style_context ().add_class ("not-opaque");
 
         show_button = new Widgets.ModelButton (_("Show completed task"), "emblem-default-symbolic", "");
  

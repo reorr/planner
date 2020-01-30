@@ -64,6 +64,7 @@ public class Widgets.LabelButton : Gtk.ToggleButton {
     private void create_popover () {
         popover = new Gtk.Popover (this);
         popover.position = Gtk.PositionType.BOTTOM;
+        popover.get_style_context ().add_class ("not-opaque");
 
         var label_entry = new Gtk.Entry ();
         label_entry.margin = 3;
