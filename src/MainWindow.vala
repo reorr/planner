@@ -152,6 +152,8 @@ public class MainWindow : Gtk.Window {
         
         stack.add_named (welcome_view, "welcome-view");
         
+        stack.get_style_context ().add_class ("not-opaque");
+        
         var toast = new Widgets.Toast ();
         magic_button = new Widgets.MagicButton ();
 
