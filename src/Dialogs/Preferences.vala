@@ -1,7 +1,6 @@
 public class Dialogs.Preferences : Gtk.Dialog {
     public string view { get; construct; }
     private Gtk.Stack stack;
-    (this).get_style_context ().add_class ("not-opaque");
     
     public Preferences (string view="home") {
         Object (

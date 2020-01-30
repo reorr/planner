@@ -471,6 +471,7 @@ public class Widgets.ProjectRow : Gtk.ListBoxRow {
 
         edit_menu.activate.connect (() => {
             var dialog = new Dialogs.ProjectSettings (project);
+            dialog.get_style_context ().add_class ("not-opaque-2");
             dialog.destroy.connect (Gtk.main_quit);
             dialog.show_all ();
         });

@@ -706,6 +706,7 @@ public class Views.Project : Gtk.EventBox {
 
         edit_menu.clicked.connect (() => {
             var dialog = new Dialogs.ProjectSettings (project);
+            dialog.get_style_context ().add_class ("not-opaque-2");
             dialog.destroy.connect (Gtk.main_quit);
             dialog.show_all ();
 

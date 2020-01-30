@@ -387,6 +387,7 @@ public class MainWindow : Gtk.Window {
 
         settings_button.clicked.connect (() => {
             var dialog = new Dialogs.Preferences ();
+            dialog.get_style_context ().add_class ("not-opaque-2");
             dialog.destroy.connect (Gtk.main_quit);
             dialog.show_all ();
         });
