@@ -861,6 +861,7 @@ public class Widgets.ItemRow : Gtk.ListBoxRow {
     private void show_item () {
         bottom_revealer.reveal_child = true;
         main_grid.get_style_context ().add_class ("item-row-selected");
+        main_grid.get_style_context ().add_class ("not-opaque-2");
 
         content_stack.visible_child_name = "content_entry";
 
